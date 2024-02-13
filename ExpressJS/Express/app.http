@@ -1,0 +1,16 @@
+###
+
+GET http://localhost:8000/images/2.jpg
+
+###
+
+GET http://localhost:8000/health
+
+###
+GET http://localhost:8000/
+
+###
+GET http://localhost:8000/1.jpg
+
+###image directory
+GET http://localhost:8000/go-net
