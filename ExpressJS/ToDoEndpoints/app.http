@@ -1,0 +1,43 @@
+//health check
+GET http://localhost:8000/health
+
+//get all todos
+###
+GET http://localhost:8000/api/todos
+
+### Request //filter todos with pages and limit
+GET http://localhost:8000/api/todos?order=desc
+
+### Request // filter todos with pages and limit && order todos asc or desc
+GET http://localhost:8000/api/todos?pages=1&limit=3&order=asc
+
+### // get todo by id
+GET http://localhost:8000/api/todos/11
+
+### // create todo
+POST http://localhost:8000/api/todos
+Content-Type: application/json
+{
+    "title": "todo from rest client1",
+    "completed": false
+}
+
+### //update todo
+PUT http://localhost:8000/api/todos/11
+Content-Type: application/json
+
+{
+    "title": "test",
+    "completed": true
+}
+
+### //complete a todo
+PATCH  http://localhost:8000/api/todos/11
+Content-Type: application/json
+
+{
+    "completed": true
+}
+
+### //delete todo
+DELETE  http://localhost:8000/api/todos/11
