@@ -1,7 +1,11 @@
 import express from "express";
+import bodyParser from 'body-parser';
 
 const app = express();
 const port = 8000;
+
+// middlewares
+app.use(bodyParser.json());
 
 app.get("/health", (req, res) => {
   res.status(200).send(`I am healthy bruh`);
@@ -33,3 +37,12 @@ app.get(
     res.status(200).json({message:'am the next function'});
   }
 );
+
+app.get('/download' ,(req,res) => {
+  res.download('./images/user1.png')
+})
+
+app.post ('/download', (req, res) => {
+  let imgName = req.body.img
+  res.download(`./images/${imgName}`)
+})

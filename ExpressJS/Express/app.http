@@ -1,16 +1,36 @@
 ###
 
-GET http://localhost:8000/images/2.jpg
+GET http://localhost:8000/images/user2.png
 
 ###
 
 GET http://localhost:8000/health
 
 ###
-GET http://localhost:8000/
+GET http://localhost:8000/images/user1.png
 
 ###
-GET http://localhost:8000/1.jpg
+GET http://localhost:8000/images/user2.png
+
+###
+GET http://localhost:8000/images/user3.png
+
+###
+GET http://localhost:8000/images/user4.png
+
+###
+GET http://localhost:8000
 
 ###image directory
 GET http://localhost:8000/go-net
+
+###
+GET http://localhost:8000/download
+
+###
+POST http://localhost:8000/download
+Content-Type: application/json
+
+{
+    "img":"user2.png"
+}
